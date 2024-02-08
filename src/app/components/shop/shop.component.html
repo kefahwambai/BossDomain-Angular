@@ -1,31 +1,22 @@
-<div class="row shopc">
+<div class="container" style="margin-top: 7rem; padding: 5rem; align-items: center; justify-content: center;">
+  <div [ngClass]="isSidePanelVisible ? 'row' : ''">
     <div [ngClass]="isSidePanelVisible ? 'col-8' : 'col-12'">
-      <div class="card">
-        <div class="card-header bg-primary">
-          <div class="row">
-            <div class="col-6">
-              Product List
-            </div>         
-          </div>
-        </div>
+      <div class="card" style="">       
         <div class="card-body">
-            <div class="row">
-              <div class="row">
-                <div class="col-3 pt-2" *ngFor="let product of productsList">
-                  <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" [src]="product.productImageUrl" style="height: 12.125rem !important" alt="Card image">
-                    <div class="card-body">
-                      <p class="card-text">Name: {{ product.productName }}</p>
-                      <p class="card-text">Price: {{ product.productPrice }}</p>
-                      <a class="btn btn-primary" (click)="addToCart(product)">Add to Cart</a>
-                    </div>
-                  </div>
+          <div class="row">
+            <div class="col-md-3 col-sm-6 mb-3" *ngFor="let product of productsList" style="padding: 1.5rem;">
+              <div class="card" style="width: 100%;">
+                <img class="card-img-top" [src]="product.productImageUrl" alt="Card image">
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.productName }}</h5>
+                  <p class="card-text">Price: {{ product.productPrice }}</p>
+                  <a class="btn btn-primary" (click)="addToCart(product)">Add to Cart</a>
                 </div>
-              </div>           
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-  
+  </div>
+</div>

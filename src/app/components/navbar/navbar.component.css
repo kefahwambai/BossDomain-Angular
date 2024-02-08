@@ -106,3 +106,16 @@
 .logospn {
   color:mediumvioletred;
 }
+
+.fas.fa-shopping-cart {
+  font-size: 24px;
+  margin-right: 5px; 
+}
+
+.fas.fa-cart-plus {
+  font-size: 14px; 
+  background-color: #dc0101; 
+  color: #ffffff; 
+  padding: 4px 8px;
+  border-radius: 50%; 
+}
