@@ -1,17 +1,23 @@
 .landingpage {
     background-size: cover;
     background-position: center;
-    padding: 10px 5px;
-    
+    padding: 10px 15px;
+    background-image: url('https://images.unsplash.com/photo-1579113800032-c38bd7635818?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80');
+    margin-top: 5.5rem;    
 }
 
 
 .home-content {
-padding: 14rem 0rem !important;
-color: rgb(9, 7, 7);
-text-align: left;
-position: relative;
-z-index: -1;
+    padding: 14rem 0rem !important;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    position: relative;
+}
+
+.banner {
+    padding-left: 4rem;
+    font-size: 2.8rem;
+    font-weight: 600;
 }
 
 
@@ -23,7 +29,7 @@ z-index: -1;
         background-size: cover;
         background-position: center;
         padding: 5px 0px;
-        margin: 0 auto; /* Center the element horizontally */
+        margin: 0 auto;
     }
     
     .landingtxt {
@@ -44,11 +50,10 @@ z-index: -1;
     
     .home-content {
     padding: 14rem 1.5rem !important;
-    color: rgb(9, 7, 7);
+    color: rgb(255, 255, 255);
     text-align: left;
-    /* width: 45rem; */
     position: relative;
-    z-index: -1;
+    font-size: 2rem;
     }
     
     .heading {

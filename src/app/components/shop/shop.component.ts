@@ -62,6 +62,9 @@ export class ShopComponent implements OnInit {
 
   addToCart(product: any) {
     this.cartService.addToCart(product);
+    
+    const updatedCart = this.cartService.getCartItems();
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
   }
 
   onEdit(item: any) {

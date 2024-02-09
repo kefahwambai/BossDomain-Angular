@@ -11,13 +11,18 @@ interface Product {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
   private cartItemsSubject: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
   public cartItems$: Observable<Product[]> = this.cartItemsSubject.asObservable();
 
-  constructor() {}
+  private readonly STORAGE_KEY = 'cart';
+
+  constructor() {
+    const storedCart = this.getCartItemsFromLocalStorage();
+    this.cartItemsSubject.next(storedCart);
+  }
 
   addToCart(product: Product) {
     let cartItems = this.cartItemsSubject.getValue();
@@ -30,6 +35,21 @@ export class CartService {
     }
 
     this.cartItemsSubject.next(cartItems);
+    this.updateLocalStorage(cartItems);
+  }
+
+  private updateLocalStorage(cartItems: Product[]): void {
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(cartItems));
+  }
+
+  private getCartItemsFromLocalStorage(): Product[] {
+    try {
+      const storedCart = localStorage.getItem(this.STORAGE_KEY);
+      return storedCart ? JSON.parse(storedCart) : [];
+    } catch (error) {
+      console.error('Error parsing stored cart from localStorage:', error);
+      return [];
+    }
   }
 
   getCartItems(): Observable<Product[]> {
@@ -43,6 +63,7 @@ export class CartService {
     if (itemIndex !== -1) {
       cartItems[itemIndex].quantity = Math.max(quantity, 0);
       this.cartItemsSubject.next(cartItems);
+      this.updateLocalStorage(cartItems);
     }
   }
 
@@ -50,5 +71,11 @@ export class CartService {
     const cartItems = this.cartItemsSubject.getValue();
     const updatedCart = cartItems.filter(item => item.productId !== productId);
     this.cartItemsSubject.next(updatedCart);
+    this.updateLocalStorage(updatedCart);
+  }
+
+  clearCart(): void {
+    this.cartItemsSubject.next([]);
+    localStorage.removeItem(this.STORAGE_KEY);
   }
 }
