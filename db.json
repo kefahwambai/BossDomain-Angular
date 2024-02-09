@@ -4,7 +4,7 @@
       "productId": 1,
       "productSku": "SKU001",
       "productName": "Mango",
-      "productPrice": 2.99,
+      "productPrice": 20,
       "productDescription": "Sweet and juicy mango.",
       "productCategory": "Fruit",
       "createdDate": "2024-02-07T12:00:00Z",
@@ -14,7 +14,7 @@
       "productId": 2,
       "productSku": "SKU002",
       "productName": "Apple",
-      "productPrice": 1.99,
+      "productPrice": 10,
       "productDescription": "Crisp and delicious apple.",
       "productCategory": "Fruit",
       "createdDate": "2024-02-08T14:30:00Z",
@@ -24,7 +24,7 @@
       "productId": 3,
       "productSku": "SKU003",
       "productName": "Banana",
-      "productPrice": 1.49,
+      "productPrice": 20,
       "productDescription": "Ripe and energy-packed banana.",
       "productCategory": "Fruit",
       "createdDate": "2024-02-09T10:45:00Z",
@@ -34,7 +34,7 @@
       "productId": 4,
       "productSku": "SKU004",
       "productName": "Quinoa",
-      "productPrice": 3.99,
+      "productPrice": 10,
       "productDescription": "Nutritious and gluten-free quinoa.",
       "productCategory": "Grain",
       "createdDate": "2024-02-10T08:15:00Z",
@@ -44,7 +44,7 @@
       "productId": 5,
       "productSku": "SKU005",
       "productName": "Brown Rice",
-      "productPrice": 2.29,
+      "productPrice": 100,
       "productDescription": "Whole grain brown rice.",
       "productCategory": "Grain",
       "createdDate": "2024-02-11T16:30:00Z",
@@ -54,7 +54,7 @@
       "productId": 6,
       "productSku": "SKU006",
       "productName": "Oats",
-      "productPrice": 1.99,
+      "productPrice": 100,
       "productDescription": "Heart-healthy oats for breakfast.",
       "productCategory": "Grain",
       "createdDate": "2024-02-12T11:00:00Z",
@@ -64,7 +64,7 @@
       "productId": 7,
       "productSku": "SKU007",
       "productName": "Carrot",
-      "productPrice": 0.79,
+      "productPrice": 20,
       "productDescription": "Fresh and crunchy carrot.",
       "productCategory": "Vegetable",
       "createdDate": "2024-02-13T13:45:00Z",
@@ -74,7 +74,7 @@
       "productId": 8,
       "productSku": "SKU008",
       "productName": "Broccoli",
-      "productPrice": 1.29,
+      "productPrice": 50,
       "productDescription": "Nutrient-rich broccoli florets.",
       "productCategory": "Vegetable",
       "createdDate": "2024-02-14T09:30:00Z",
@@ -84,7 +84,7 @@
       "productId": 9,
       "productSku": "SKU009",
       "productName": "Kale",
-      "productPrice": 1.49,
+      "productPrice": 20,
       "productDescription": "Fresh and leafy Kale bunch.",
       "productCategory": "Vegetable",
       "createdDate": "2024-02-15T18:00:00Z",
@@ -94,12 +94,63 @@
       "productId": 10,
       "productSku": "SKU010",
       "productName": "Bell Pepper",
-      "productPrice": 0.99,
+      "productPrice": 50,
       "productDescription": "Colorful bell pepper for cooking.",
       "productCategory": "Vegetable",
       "createdDate": "2024-02-16T14:15:00Z",
-      "productImageUrl": "https://media.istockphoto.com/photos/colorful-bell-peppers-on-white-background-picture-id513389362?k=20&m=513389362&s=170667a&w=0&h=lZRIbVhufaY3ML8r5A_2R6rEY_P_UW5sK1PTJxzrp3g="
+      "productImageUrl": "https://images.unsplash.com/photo-1592548868664-f8b4e4b1cfb7?q=80&w=1891&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "productId": 11,
+      "productSku": "SKU011",
+      "productName": "Milk",
+      "productPrice": 60,
+      "productDescription": "Fresh and nutritious cow's milk.",
+      "productCategory": "Dairy",
+      "createdDate": "2024-02-17T09:30:00Z",
+      "productImageUrl": "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1pbGt8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "productId": 12,
+      "productSku": "SKU012",
+      "productName": "Cheese",
+      "productPrice": 100,
+      "productDescription": "Delicious and creamy cheddar cheese.",
+      "productCategory": "Dairy",
+      "createdDate": "2024-02-18T14:15:00Z",
+      "productImageUrl": "https://images.unsplash.com/photo-1624806992066-5ffcf7ca186b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoZWVzZXxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "productId": 13,
+      "productSku": "SKU013",
+      "productName": "Yogurt",
+      "productPrice": 150,
+      "productDescription": "Creamy and probiotic-rich yogurt.",
+      "productCategory": "Dairy",
+      "createdDate": "2024-02-19T11:45:00Z",
+      "productImageUrl": "https://images.unsplash.com/photo-1584278433313-562a1bc0aa6b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHlvZ2h1cnR8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "productId": 14,
+      "productSku": "SKU014",
+      "productName": "Butter",
+      "productPrice": 100,
+      "productDescription": "Rich and creamy unsalted butter.",
+      "productCategory": "Dairy",
+      "createdDate": "2024-02-20T15:30:00Z",
+      "productImageUrl": "https://images.unsplash.com/photo-1603596310923-dbb12732f9c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJ1dHRlcnxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "productId": 15,
+      "productSku": "SKU015",
+      "productName": "Ice Cream",
+      "productPrice": 70,
+      "productDescription": "Indulgent and delicious vanilla ice cream.",
+      "productCategory": "Dairy",
+      "createdDate": "2024-02-21T20:00:00Z",
+      "productImageUrl": "https://images.unsplash.com/photo-1488900128323-21503983a07e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGljZSUyMGNyZWFtfGVufDB8fDB8fHww"
     }
+    
   ],
   "categories": [
     {
@@ -113,6 +164,10 @@
     {
       "categoryId": 3,
       "categoryName": "Vegetable"
+    },
+    {
+      "categoryId": 4,
+      "categoryName": "Dairy"
     }
   ]
 }

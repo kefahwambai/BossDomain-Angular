@@ -27,6 +27,9 @@ export class ShopComponent implements OnInit {
   categoryList: any[] = [];
   productsList: any[] = [];
   cart: any[] = [];
+  sortBy: string = '';
+  searchTerm: string = '';
+
 
   constructor(private productService: ProductService, private cartService: CartService) {} 
 
@@ -65,6 +68,32 @@ export class ShopComponent implements OnInit {
     
     const updatedCart = this.cartService.getCartItems();
     localStorage.setItem('cart', JSON.stringify(updatedCart));
+  }
+
+  searchProducts(): void {
+    console.log('Search term:', this.searchTerm);
+  
+    if (this.searchTerm.trim() === '') {
+      console.log('Resetting products list');
+      this.getProducts();
+    } else {
+      console.log('Filtering products');
+      this.productsList = this.productsList.filter(product =>
+        product.productName.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        product.productCategory.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    }
+  
+    console.log('Updated products list:', this.productsList);
+  }
+  
+
+  toggleDescription(product: any): void {
+    product.showDescription = true;
+  }
+  
+  resetDescription(product: any): void {
+    product.showDescription = false;
   }
 
   onEdit(item: any) {
