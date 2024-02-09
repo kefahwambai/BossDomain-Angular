@@ -2,12 +2,15 @@
   <div [ngClass]="isSidePanelVisible ? 'row' : ''">
     <div [ngClass]="isSidePanelVisible ? 'col-8' : 'col-12'">
       <div class="card">       
-        <div class="card-body" >
+        <div class="card-body">
           <form class="d-flex">
-            <input class="form-control me-1" type="text" [(ngModel)]="searchTerm" name="searchTerm" placeholder="   Search..." style="width: 10rem">
-            <button class="btn btn-primary" type="button" (click)="searchProducts()" style="width: 4rem">Search</button>
-          </form>
-             
+            <div class="col-md-2">
+              <input class="form-control me-1" type="text" [(ngModel)]="searchTerm" name="searchTerm" placeholder="Search...">
+            </div>
+            <div class="col-md-1">
+              <button style="margin-top: 1px;" class="btn btn-primary" type="button" (click)="searchProducts()">Search</button>
+            </div>
+          </form>             
           <div class="row">
             <div class="col-md-3 col-sm-6 mb-3" *ngFor="let product of productsList" style="padding: 1.5rem;">
               <div class="card" style="width: 100%;">
