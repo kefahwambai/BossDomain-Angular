@@ -1,0 +1,23 @@
+<div class="register">
+    <span class="registerTitle">Register</span>
+    <div *ngIf="message" class="alert alert-success mb-2">{{ message }}</div>
+    <div *ngIf="signupError" class="alert alert-danger mb-2">{{ signupError }}</div>
+    <form class="registerForm" (submit)="handleSubmit($event)">
+      <label for="name">Username</label>
+      <input class="registerInput" type="text" placeholder="Enter your username..." id="name" name="name" [(ngModel)]="name" required />
+  
+      <label for="email">Email</label>
+      <input class="registerInput" type="text" placeholder="Enter your email..." id="email" name="email" [(ngModel)]="email" required />
+  
+      <label for="password">Password</label>
+      <input class="registerInput" type="password" placeholder="Enter your password..." id="password" name="password" [(ngModel)]="password" required />
+  
+      <label for="passwordConfirmation">Password Confirmation</label>
+      <input class="registerInput" type="password" placeholder="Confirm your password..." id="passwordConfirmation" name="passwordConfirmation" [(ngModel)]="passwordConfirmation" required />
+  
+      <button class="registerButton" type="submit">Register</button>
+
+      <p class="loginRegisterButton" style="margin-top: 1rem;"> Already have an account? <a routerLink="/login">Login</a></p>
+    </form>
+
+</div>

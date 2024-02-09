@@ -3,6 +3,7 @@ import { ProductService } from '../../service/product.service';
 import { CartService } from '../../service/cart.service'; 
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shop',
@@ -32,7 +33,7 @@ export class ShopComponent implements OnInit {
   searchTerm: string = '';
 
 
-  constructor(private productService: ProductService, private cartService: CartService) {} 
+  constructor(private productService: ProductService, private cartService: CartService, private router: Router) {} 
 
   ngOnInit(): void {
     this.getProducts();
@@ -64,11 +65,24 @@ export class ShopComponent implements OnInit {
     );
   }
 
-  addToCart(product: any) {
+  addToCart(product: any): void {
+    const tok = sessionStorage.getItem('jwt');
+    console.log(tok)
+  
+    if (!tok) {
+      this.router.navigate(['/login']);
+      return; 
+    }
+
     this.cartService.addToCart(product);
-    
     const updatedCart = this.cartService.getCartItems();
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    sessionStorage.setItem('cart', JSON.stringify(updatedCart));
+  
+    console.log('Product added to cart:', product);
+  }
+  
+  private isUserLoggedIn(): boolean {
+    return localStorage.getItem('jwt') !== null;
   }
 
   searchProducts(): void {

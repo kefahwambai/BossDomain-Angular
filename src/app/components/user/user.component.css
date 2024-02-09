@@ -1,0 +1,111 @@
+.settings {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+  }
+  
+  .settingsWrapper {
+    flex: 1; 
+    padding: 20px;
+    max-width: 400px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+  }
+  
+  .settingsTitle {
+    text-align: center; 
+  }
+  
+  .settingsTitleUpdate {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: lightcoral;
+  }
+  
+  .settingsTitleDelete {
+    color: red;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .settingsForm {
+    margin-top: 20px; 
+  }
+  
+  .settingsPP {
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .settingsPP > img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%; 
+    object-fit: cover;
+  }
+  
+  .settingsPPIcon {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-top: 10px;
+    color: white;
+    background-color: lightcoral;
+    cursor: pointer;
+  }
+  
+  .settingsForm > label {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  .settingsPPInput,
+  .settingsForm > input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .settingsSubmitButton {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: teal;
+    padding: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .settingsSubmitButton:hover {
+    background-color: rgb(1, 114, 114);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .settingsWrapper {
+      max-width: 100%; 
+    }
+  
+    .settingsTitleUpdate {
+      font-size: 20px;
+    }
+  
+    .settingsPPIcon {
+      width: 25px;
+      height: 25px;
+    }
+  
+    .settingsSubmitButton {
+      padding: 10px; 
+    }
+  }
