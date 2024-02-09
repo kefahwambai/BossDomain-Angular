@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -23,15 +22,15 @@ export class AuthService {
   }
 
   logout(): void {
-    sessionStorage.removeItem('userData');
+    localStorage.removeItem('userData');
   }
 
   setUser(userData: any): void {
-    sessionStorage.setItem('userData', JSON.stringify(userData));
+    localStorage.setItem('userData', JSON.stringify(userData));
   }
 
   getUser(): any {
-    const userDataString = sessionStorage.getItem('userData');
+    const userDataString = localStorage.getItem('userData');
     return userDataString ? JSON.parse(userDataString) : null;
   }
 

@@ -4,6 +4,7 @@ import { CartService } from '../../service/cart.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import * as flatted from 'flatted';
 
 @Component({
   selector: 'app-shop',
@@ -15,8 +16,7 @@ import { Router } from '@angular/router';
 export class ShopComponent implements OnInit {
 
   isSidePanelVisible: boolean = false;
-  productObj: any = {
-    "productId": 0,
+  productObj: any = {    
     "productSku": "",
     "productName": "",
     "productPrice": 0,
@@ -67,7 +67,7 @@ export class ShopComponent implements OnInit {
 
   addToCart(product: any): void {
     const tok = sessionStorage.getItem('jwt');
-    console.log(tok)
+    // console.log(tok)
   
     if (!tok) {
       this.router.navigate(['/login']);
@@ -76,13 +76,13 @@ export class ShopComponent implements OnInit {
 
     this.cartService.addToCart(product);
     const updatedCart = this.cartService.getCartItems();
-    sessionStorage.setItem('cart', JSON.stringify(updatedCart));
+    sessionStorage.setItem('cart', flatted.stringify(updatedCart));
   
-    console.log('Product added to cart:', product);
+    // console.log('Product added to cart:', product);
   }
   
   private isUserLoggedIn(): boolean {
-    return localStorage.getItem('jwt') !== null;
+    return sessionStorage.getItem('jwt') !== null;
   }
 
   searchProducts(): void {

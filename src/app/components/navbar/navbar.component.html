@@ -23,24 +23,20 @@
             <span class="fas fa-cart-plus" *ngIf="cartItemCount > 0">{{ cartItemCount }}</span>
           </a>
         </li>  
-        <li class="nav-item" *ngIf="!user && !isUserLoggedIn()">
-          <a routerLink="/login" class="nav-link">
-            Login
-          </a>
-        </li>
-        <li class="nav-item" *ngIf="!user && !isUserLoggedIn()">
-          <a routerLink="/signup" class="nav-link">
-            Signup
-          </a>
-        </li>
-        <li class="nav-item" *ngIf="user || isUserLoggedIn()">
+        <li class="nav-item" *ngIf="isUserLoggedIn()">
           <a routerLink="/profile" class="nav-link">
             Profile
           </a>
         </li>
-        <li class="nav-item" *ngIf="user || isUserLoggedIn()" (click)="logout()">
+        <li class="nav-item" *ngIf="isUserLoggedIn()" (click)="logout()">
           LOGOUT
         </li>
+        <li class="nav-item" *ngIf="!isUserLoggedIn()">
+          <a routerLink="/login" class="nav-link">
+            Login
+          </a>
+        </li>      
+        
       </ul>    
     </div>
   </div>
