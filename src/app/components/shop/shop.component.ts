@@ -25,6 +25,7 @@ export class ShopComponent implements OnInit {
     "productImageUrl": ""
   };
   categoryList: any[] = [];
+  filteredProducts: any[] = [];
   productsList: any[] = [];
   cart: any[] = [];
   sortBy: string = '';
@@ -73,6 +74,7 @@ export class ShopComponent implements OnInit {
   searchProducts(): void {
     console.log('Search term:', this.searchTerm);
   
+
     if (this.searchTerm.trim() === '') {
       console.log('Resetting products list');
       this.getProducts();
@@ -83,6 +85,7 @@ export class ShopComponent implements OnInit {
         product.productCategory.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     }
+
   
     console.log('Updated products list:', this.productsList);
   }
