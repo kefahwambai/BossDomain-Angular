@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import * as flatted from 'flatted';
 
+
 @Component({
   selector: 'app-shop',
   standalone: true,
@@ -78,7 +79,7 @@ export class ShopComponent implements OnInit {
     const updatedCart = this.cartService.getCartItems();
     sessionStorage.setItem('cart', flatted.stringify(updatedCart));
   
-    // console.log('Product added to cart:', product);
+    console.log('Product added to cart:', product);
   }
   
   private isUserLoggedIn(): boolean {
