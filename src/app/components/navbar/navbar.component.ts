@@ -27,7 +27,7 @@ export class NavbarComponent {
   }
 
   isUserLoggedIn(): boolean {
-    return localStorage.getItem('jwt') !== null;
+    return !!localStorage.getItem('jwt') !== null;
   }
 
   navigateTo(route: string): void {

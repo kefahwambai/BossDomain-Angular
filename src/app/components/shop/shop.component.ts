@@ -114,16 +114,5 @@ export class ShopComponent implements OnInit {
     product.showDescription = false;
   }
 
-  onEdit(item: any) {
-    this.productObj = item;
-    this.openSidePanel();
-  }
 
-  openSidePanel() {
-    this.isSidePanelVisible = true;
-  }
-
-  closeSidePanel() {
-    this.isSidePanelVisible = false;
-  }
 }
