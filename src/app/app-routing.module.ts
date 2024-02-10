@@ -5,9 +5,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { CartComponent } from './components/cart/cart.component';
 import { LoginComponent } from './components/login/login.component';
-import { LogoutComponent } from './components/logout/logout.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { UserComponent } from './components/user/user.component';
+import { AuthGuardService } from './service/authguard.service';
 
 const routes: Routes = [
   {
@@ -24,22 +24,19 @@ const routes: Routes = [
   },
   {
     path: 'checkout',
-    component: CartComponent
-
+    component: CartComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'profile',
-    component: UserComponent
+    component: UserComponent,
+    canActivate: [AuthGuardService]
 
   },
   { 
     path: 'login',
    component: LoginComponent
   },
-  { 
-    path: 'logout',
-   component: LogoutComponent
-   },
   { 
   path: 'signup',
    component: SignupComponent

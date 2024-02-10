@@ -13,6 +13,7 @@ import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { AuthGuardService } from './service/authguard.service';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { SignupComponent } from './components/signup/signup.component';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
