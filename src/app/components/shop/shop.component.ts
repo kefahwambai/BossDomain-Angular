@@ -67,7 +67,7 @@ export class ShopComponent implements OnInit {
   }
 
   addToCart(product: any): void {
-    const tok = sessionStorage.getItem('jwt');
+    const tok = sessionStorage.getItem('userData');
     // console.log(tok)
   
     if (!tok) {
@@ -83,7 +83,7 @@ export class ShopComponent implements OnInit {
   }
   
   private isUserLoggedIn(): boolean {
-    return sessionStorage.getItem('jwt') !== null;
+    return sessionStorage.getItem('userData') !== null;
   }
 
   searchProducts(): void {
@@ -102,7 +102,7 @@ export class ShopComponent implements OnInit {
     }
 
   
-    console.log('Updated products list:', this.productsList);
+    // console.log('Updated products list:', this.productsList);
   }
   
 

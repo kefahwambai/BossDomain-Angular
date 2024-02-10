@@ -22,18 +22,19 @@ export class AuthService {
   }
 
   logout(): void {
-    localStorage.removeItem('userData');
-    this.userSubject.next(null);
-    this.router.navigate(['/login']);
+    sessionStorage.removeItem('userData');
+    this.userSubject.next(null); 
+    alert('Logout Successful!');
+    this.router.navigate(['/home']);
   }
 
   setUser(userData: any): void {
-    localStorage.setItem('userData', JSON.stringify(userData));
+    sessionStorage.setItem('userData', JSON.stringify(userData));
     this.userSubject.next(userData);
   }
 
   getUser(): any {
-    const userDataString = localStorage.getItem('userData');
+    const userDataString = sessionStorage.getItem('userData');
     return userDataString ? JSON.parse(userDataString) : null;
   }
 
