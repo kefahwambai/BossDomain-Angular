@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl = 'http://localhost:3000'; 
+  private baseUrl = 'https://dbjson-gamma.vercel.app'; 
 
   constructor(private http: HttpClient) {}
 

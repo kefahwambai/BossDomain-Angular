@@ -27,8 +27,9 @@ export class NavbarComponent {
   }
 
   isUserLoggedIn(): boolean {
-    return !!sessionStorage.getItem('userData') !== null;
+    return !!sessionStorage.getItem('userData');
   }
+  
 
   navigateTo(route: string): void {
     this.router.navigate([route]);
